@@ -21,11 +21,11 @@
   address
   );
    const timestamp = new Date().toISOString()
-  //  const signature = client.private.sign({
-  //    requestPath: '/ws/v3/orderbook/:market',
-  //    method: 'GET',
-  //    isoTimestamp: timestamp,
-  //  })
+   const signature = client.private.sign({
+     requestPath: '/ws/v3/orderbook/:market',
+     method: 'GET',
+     isoTimestamp: timestamp,
+   })
 
   //    const signature = client.private.sign({
   //    requestPath: '/ws/accounts',
@@ -49,11 +49,11 @@
   //    id:'BTC-USD'
   //  }
 
- const signature = client.private.sign({
-     requestPath: '/v3/orders',
-     method: 'POST',
-     isoTimestamp: timestamp,
-   })
+//  const signature = client.private.sign({
+//      requestPath: '/v3/orders',
+//      method: 'POST',
+//      isoTimestamp: timestamp,
+//    })
   const order = await client.private.createOrder(
     {
       side: "SELL",
